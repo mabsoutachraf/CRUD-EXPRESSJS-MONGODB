@@ -78,4 +78,17 @@ app.put("/stagiaires/:id", async (req, res) => {
 });
 
 
+// delete a stagiaire
+app.delete("/stagiaires/:id", async (req, res) => {
+
+    // get the id
+    const { id } = req.params;
+
+    await Stagiaire.deleteOne({ _id: id });
+
+    res.json({ message: "Deleted successfully" });
+
+});
+
+
 app.listen(82, () => console.log('Server is running on port 82'));
