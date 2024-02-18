@@ -55,5 +55,27 @@ app.post("/stagiaires", (req, res) => {
 });
 
 
+// update new stagiaire
+
+app.put("/stagiaires/:id", async (req, res) => {
+
+    // get the id
+    const { id } = req.params;
+
+    // search for this specific resource
+    const stagiaire = await Stagiaire.findById(id);
+
+    stagiaire.nom = req.body.nom ? req.body.nom : stagiaire.nom;
+    stagiaire.prenom = req.body.prenom ?  req.body.prenom : stagiaire.prenom;
+    stagiaire.age = req.body.age ? req.body.age : stagiaire.age;
+    stagiaire.ville = req.body.ville ?  req.body.ville : stagiaire.ville;
+    stagiaire.filiere = req.body.filiere ? req.body.filiere : stagiaire.filiere;
+
+    stagiaire.save();
+
+    res.json({ message : "Updated successfully", data : stagiaire });
+
+});
+
 
 app.listen(82, () => console.log('Server is running on port 82'));
