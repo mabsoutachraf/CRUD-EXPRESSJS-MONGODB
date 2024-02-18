@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "crud-expressjs-mongodb",
+  "description": "Restfull api CRUD ( CREATE READ UPDATE DELETE ) using expressJs and mongodb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mabsoutachraf/CRUD-EXPRESSJS-MONGODB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mabsoutachraf/CRUD-EXPRESSJS-MONGODB/issues"
+  },
+  "homepage": "https://github.com/mabsoutachraf/CRUD-EXPRESSJS-MONGODB#readme"
+}
